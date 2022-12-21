@@ -1,7 +1,7 @@
 var img_guard = document.createElement("img");
 img_guard.src = "https://png.pngitem.com/pimgs/s/101-1010641_download-svg-download-png-police-officer-emoji-transparent.png";
 img_guard.setAttribute("width", "60px");
-img_guard.setAttribute("height", "55px");
+img_guard.setAttribute("height", "60px");
 
 var img_player = document.createElement("img");
 img_player.src = "https://cdn-icons-png.flaticon.com/512/2061/2061482.png"
@@ -12,6 +12,11 @@ var img_exit = document.createElement("img");
 img_exit.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_XzFI9L5s7frNaOJz-4v5_T1EYl2G_J-ri-ngBbYOd1GFiTzMhRs1MHhhEClA2qYx8cI&usqp=CAU"
 img_exit.setAttribute("width", "60px");
 img_exit.setAttribute("height", "60px");
+
+var img_college = document.createElement("img");
+img_college.src = "https://j6p3d5c7.stackpathcdn.com/wp-content/uploads/2004/10/school-building-square-cartoon-illustration.jpg"
+img_college.setAttribute("width", "60px");
+img_college.setAttribute("height", "60px");
 
 const LEVELS = [
     {
@@ -78,8 +83,12 @@ const placePlayer = (pos) => {
     place(pos, img_player);
 }
 
+const placeExit = (pos) => {
+    place(pos, (CURRENT_LEVEL) ? img_college : img_exit);
+}
+
 const update = () => {
-    place(exit, img_exit);
+    placeExit(exit);
     placePlayer(player);
     placeGuard(guard);
 }
@@ -186,9 +195,7 @@ function arraysEqual(a, b) {
 }
 
 var [exit, player, guard, walls] = [LEVELS[CURRENT_LEVEL].exit.slice(), LEVELS[CURRENT_LEVEL].player.slice(), LEVELS[CURRENT_LEVEL].guard.slice(), LEVELS[CURRENT_LEVEL].walls.slice()];
-placeGuard(guard);
-placePlayer(player);
-place(exit, img_exit);
+update();
 
 this.addEventListener('keydown', event => {
     console.log(player);
