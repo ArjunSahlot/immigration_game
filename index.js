@@ -232,8 +232,8 @@ this.addEventListener('keydown', event => {
                 alert("You won!");
                 loadLevel(CURRENT_LEVEL ? 0 : 1);
             }
-            update();
             computerMove();
+            update();
             if (arraysEqual(player, guard)) {
                 alert("You lost!");
                 loadLevel(CURRENT_LEVEL);
