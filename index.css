@@ -1,6 +1,100 @@
-/*
-! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
-*/
+/* fira-mono-cyrillic-ext-400-normal*/
+
+@font-face {
+  font-family: 'Fira Mono';
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 400;
+
+  src: url('./files/fira-mono-cyrillic-ext-400-normal.woff2') format('woff2'), url('./files/fira-mono-all-400-normal.woff') format('woff');
+
+  unicode-range: U+0460-052F,U+1C80-1C88,U+20B4,U+2DE0-2DFF,U+A640-A69F,U+FE2E-FE2F;
+}
+
+/* fira-mono-cyrillic-400-normal*/
+
+@font-face {
+  font-family: 'Fira Mono';
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 400;
+
+  src: url('./files/fira-mono-cyrillic-400-normal.woff2') format('woff2'), url('./files/fira-mono-all-400-normal.woff') format('woff');
+
+  unicode-range: U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;
+}
+
+/* fira-mono-greek-ext-400-normal*/
+
+@font-face {
+  font-family: 'Fira Mono';
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 400;
+
+  src: url('./files/fira-mono-greek-ext-400-normal.woff2') format('woff2'), url('./files/fira-mono-all-400-normal.woff') format('woff');
+
+  unicode-range: U+1F00-1FFF;
+}
+
+/* fira-mono-greek-400-normal*/
+
+@font-face {
+  font-family: 'Fira Mono';
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 400;
+
+  src: url('./files/fira-mono-greek-400-normal.woff2') format('woff2'), url('./files/fira-mono-all-400-normal.woff') format('woff');
+
+  unicode-range: U+0370-03FF;
+}
+
+/* fira-mono-latin-ext-400-normal*/
+
+@font-face {
+  font-family: 'Fira Mono';
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 400;
+
+  src: url('./files/fira-mono-latin-ext-400-normal.woff2') format('woff2'), url('./files/fira-mono-all-400-normal.woff') format('woff');
+
+  unicode-range: U+0100-024F,U+0259,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20CF,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
+/* fira-mono-latin-400-normal*/
+
+@font-face {
+  font-family: 'Fira Mono';
+
+  font-style: normal;
+
+  font-display: swap;
+
+  font-weight: 400;
+
+  src: url('./files/fira-mono-latin-400-normal.woff2') format('woff2'), url('./files/fira-mono-all-400-normal.woff') format('woff');
+
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+
+/* ! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com*/
 
 /*
 1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
@@ -534,6 +628,10 @@ video {
   display: grid;
 }
 
+.hidden {
+  display: none;
+}
+
 .h-\[384px\] {
   height: 384px;
 }
@@ -618,6 +716,10 @@ video {
   border-right-width: 5px;
 }
 
+.border-l-\[5px\] {
+  border-left-width: 5px;
+}
+
 .border-gray-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 231 235 / var(--tw-border-opacity));
@@ -654,6 +756,11 @@ video {
   border-top-color: inherit;
 }
 
+.bg-tealish {
+  --tw-bg-opacity: 1;
+  background-color: rgb(159 196 204 / var(--tw-bg-opacity));
+}
+
 .p-2 {
   padding: 0.5rem;
 }
@@ -664,6 +771,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.font-body {
+  font-family: Fira Mono;
 }
 
 .text-4xl {
@@ -703,4 +814,30 @@ video {
 
 .outline-gray-900 {
   outline-color: #111827;
+}
+
+.striped div:nth-child(even) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(122 141 156 / var(--tw-bg-opacity));
+}
+
+:where(.child\:h-\[64px\]) > :where(:not(.not-child)) {
+  height: 64px;
+}
+
+:where(.child\:w-\[64px\]) > :where(:not(.not-child)) {
+  width: 64px;
+}
+
+:where(.child\:border-\[3px\]) > :where(:not(.not-child)) {
+  border-width: 3px;
+}
+
+:where(.child\:border-gray-200) > :where(:not(.not-child)) {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
+:where(.child\:text-center) > :where(:not(.not-child)) {
+  text-align: center;
 }
