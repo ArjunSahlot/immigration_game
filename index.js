@@ -1,5 +1,5 @@
 var img_guard = document.createElement("img");
-img_guard.src = "https://png.pngitem.com/pimgs/s/101-1010641_download-svg-download-png-police-officer-emoji-transparent.png";
+img_guard.src = "https://www.pngfind.com/pngs/m/318-3184614_officer-png-transparent-background-police-man-emoji-png.png";
 img_guard.setAttribute("width", "60px");
 img_guard.setAttribute("height", "60px");
 
