@@ -55,7 +55,8 @@ const LEVELS = [
             [[0, 0], [1, 0]],
             [[0, 2], [1, 2]],
             [[0, 3], [1, 3]],
-            [[0, 4], [1, 4]]
+            [[0, 4], [1, 4]],
+            [[2, 1], [3, 1]]
         ],
     },
 ]
@@ -228,16 +229,20 @@ this.addEventListener('keydown', event => {
         }
         if (moved) {
             update();
-            if (arraysEqual(player, exit)) {
-                alert("You won!");
-                loadLevel(CURRENT_LEVEL ? 0 : 1);
-            }
+            setTimeout(() => {
+                if (arraysEqual(player, exit)) {
+                    alert("You won!");
+                    loadLevel(CURRENT_LEVEL ? 0 : 1);
+                }
+            }, 1000);
             computerMove();
             update();
-            if (arraysEqual(player, guard)) {
-                alert("You lost!");
-                loadLevel(CURRENT_LEVEL);
-            }
+            setTimeout(() => {
+                if (arraysEqual(player, guard)) {
+                    alert("You lost!");
+                    loadLevel(CURRENT_LEVEL);
+                }
+            }, 1000);
         }
     }
 })
